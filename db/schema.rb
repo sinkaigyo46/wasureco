@@ -13,6 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_08_13_121728) do
   create_table "hobbies", charset: "utf8", force: :cascade do |t|
     t.integer "genre_id", null: false
+    t.date "date", null: false
     t.text "activity", null: false
     t.time "time", null: false
     t.bigint "user_id", null: false

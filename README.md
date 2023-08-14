@@ -24,6 +24,7 @@
 | activity         | text        | null: false |
 | time             | time        | null: false |
 | user_id          | references  | null: false,  foreign_key: true |
+| date             | date        | null: false |
 ### Association
 
 - has_many   :comments
