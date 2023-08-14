@@ -1,0 +1,33 @@
+@import "bootstrap";
+
+body {
+  background-color: rgb(114, 120, 161)
+;
+}
+
+.fs-1 {
+color: gainsboro;
+font-weight: 500;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.fs-5 {
+  text-decoration:none;
+  color: black;
+  margin-right: 20px;
+  text-decoration: underline wavy gold;
+}
+
+.col-md-3 {
+  padding-top: 20px;
+}
+
+.btn-outline-primary {
+ color: whitesmoke;
+ background-color: black;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+}
