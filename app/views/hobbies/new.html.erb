@@ -1,0 +1,35 @@
+<%= render "shared/header" %>
+<div class="main">
+ <%= form_with model: @hobby, url: hobbies_path, class: 'form', local: true do |f| %>
+  <ul class="form-list">
+    <li>
+    <%= f.label :日付, class: 'lavel' %>
+    </li>
+    <li>
+    <%= f.date_field :date, class: 'select' %>
+    </li>
+    <li>
+    <%= f.label :ジャンル, class: 'lavel' %>
+    </li>
+      <li>
+    <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select"}) %>
+    </li>
+    <li>
+    <%= f.label :時間, class: 'lavel' %>
+    </li>
+    <li>
+    <%= f.number_field :time, in: 0.5..20.0, step: 0.5, class:"time-select" %>
+    </li>
+    <li>
+    <%= f.label :気づき, class: 'lavel' %>
+    </li>
+    <li>
+    <%= f.text_area :activity, class: 'text-input' %>
+    </li>
+    <%= f.submit '投稿' %>
+  </ul>
+  <% end %>
+  </div>
+
+ 
+<%= render "shared/footer" %>

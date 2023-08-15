@@ -1,5 +1,16 @@
 <%= render "shared/header" %>
-<main>
-</main>
- 
+<div class="index-main">
+<%= link_to(new_hobby_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>投稿</span>
+  <%= image_tag 'post.png' , size: '70x70' ,class: "purchase-btn-icon" %>
+<% end %>
+
+<% @hobby.each do |hobby| %>
+<%= hobby.date %>
+<%= hobby.genre.name %>
+<%= hobby.time %>
+<%= hobby.activity %>
+<% end %>
+</div>
 <%= render "shared/footer" %>
+
