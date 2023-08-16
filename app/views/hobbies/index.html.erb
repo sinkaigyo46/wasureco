@@ -5,12 +5,29 @@
   <%= image_tag 'post.png' , size: '70x70' ,class: "purchase-btn-icon" %>
 <% end %>
 
+<div class="contents">
 <% @hobby.each do |hobby| %>
+<%= link_to hobby_path(hobby) do %>
+<div class="item">
+<h3 class="date">
 <%= hobby.date %>
-<%= hobby.genre.name %>
-<%= hobby.time %>
-<%= hobby.activity %>
+</h3>
 <% end %>
+<h5 class="genre">
+<%= hobby.genre.name %>
+</h5>
+<p class="time">
+<%= hobby.time %>
+</p>
+<h6>気付き</h6>
+<p class="activity">
+<%= hobby.activity %>
+</p>
+</div>
+
+<% end %>
+</div>
+
 </div>
 <%= render "shared/footer" %>
 
