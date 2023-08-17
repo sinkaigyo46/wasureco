@@ -1,0 +1,24 @@
+<%= render "shared/header" %>
+<div class="main">
+<div class="edit-contents">
+<div class="edit-item">
+
+
+<h3 class="date">
+<%= @hobby.date %>
+</h3>
+<h5 class="genre">
+<%= @hobby.genre.name %>
+</h5>
+<p class="time">
+<%= @hobby.time %>
+</p>
+<h6>気付き</h6>
+<p class="activity">
+<%= @hobby.activity %>
+</p>
+ <%= link_to '編集', edit_hobby_path, method: :get, class:"edit-btn" %>
+</div>
+</div>
+</div>
+<%= render "shared/footer" %>

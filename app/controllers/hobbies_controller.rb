@@ -16,6 +16,21 @@ class HobbiesController < ApplicationController
       render :new, status: :unprocessable_entity
      end
   end
+
+  def show
+    @hobby = Hobby.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @hobby.update(hobby_params)
+      redirect_to hobby_path(@hobby)
+    else
+      render action: :edit, status: :unprocessable_entity
+    end
+  end
   
 
 

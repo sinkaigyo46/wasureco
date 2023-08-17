@@ -1,16 +1,14 @@
 @import "bootstrap";
 
-.header {
-  display: flex;
-  justify-content: space-between;
-}
 .login-flash-message{
   margin-bottom: 20px;
 }
 
+.footer{
+  width: 100vw;
+}
 body {
-  background-color: rgb(114, 120, 161)
-;
+  background-color: rgb(114, 120, 161);
 }
 
 .index-main {
@@ -45,10 +43,11 @@ font-weight: 500;
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .fs-5 {
-  text-decoration:none;
+  font-weight: bold;
   color: black;
-  margin-right: 20px;
-  text-decoration: underline wavy gold;
+  text-decoration: none;
+  padding-top :10px;
+  margin-right :20px;
 }
 
 .col-md-3 {
@@ -67,6 +66,7 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  color: whitesmoke;
  background-color: forestgreen;
  border-color: cadetblue;
+ margin-bottom: 5px;
 }
 
 
@@ -83,7 +83,7 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   right: 32px;
   position: fixed;
   padding: 15px ;
-  margin-bottom: 20px;
+  margin-bottom: 53px;
 }
 
 
@@ -147,12 +147,18 @@ ul {
   margin: 60px 0 0 40px; 
 }
 
+.edit-contents {
+  display: flex;
+  justify-content: center;
+}
+
 .item {
 margin-left: 60px;
 margin-bottom :60px;
 text-decoration: none;
 box-decoration-break: clone;
 }
+
 
 .date {
  text-decoration : underline maroon;
