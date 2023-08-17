@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema[7.0].define(version: 2023_08_13_121728) do
   create_table "hobbies", charset: "utf8", force: :cascade do |t|
     t.integer "genre_id", null: false
     t.date "date", null: false
     t.text "activity", null: false
     t.time "time", null: false
+=======
+ActiveRecord::Schema[7.0].define(version: 2023_08_13_011923) do
+  create_table "hobbies", charset: "utf8", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.text "activity", null: false
+    t.integer "time", null: false
+>>>>>>> Stashed changes
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
