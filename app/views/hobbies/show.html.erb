@@ -18,6 +18,7 @@
 <%= @hobby.activity %>
 </p>
  <%= link_to '編集', edit_hobby_path, method: :get, class:"edit-btn" %>
+ <%= link_to '削除', hobby_path(@hobby.id), data: { turbo_method: :delete }, class:"destroy-btn" %>
 </div>
 </div>
 </div>
