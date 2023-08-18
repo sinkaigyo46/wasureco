@@ -1,6 +1,6 @@
 class HobbiesController < ApplicationController
   before_action :authenticate_user!, only: [:new]
-  before_action :set_hobby, only: [:show, :edit, :update]
+  before_action :set_hobby, only: [:show, :edit, :update, :destroy]
   def index
     @hobby = Hobby.all
   end
@@ -31,6 +31,11 @@ class HobbiesController < ApplicationController
     else
       render action: :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @hobby.destroy 
+    redirect_to root_path
   end
   
 
