@@ -9,18 +9,18 @@
 <div class="contents">
 <% @hobby.each do |hobby| %>
 <%= link_to hobby_path(hobby) do %>
-<div class="item <%= "genre-#{hobby.genre.id}" %>">
+<div class="item">
 <h3 class="date">
 <%= hobby.date %>
 </h3>
 <% end %>
-<h5 class="genre">
+<div class="genre <%= "genre-#{hobby.genre.id}" %>">
 <%= hobby.genre.name %>
-</h5>
+</div>
 <p class="time">
 <%= hobby.time %>
 </p>
-<h6>気付き</h6>
+<div class="activity">気付き</div>
 <p class="activity">
 <%= hobby.activity %>
 </p>

@@ -8,9 +8,9 @@
 <h3 class="date">
 <%= @hobby.date %>
 </h3>
-<h5 class="genre">
+<div class="genre <%= "genre-#{@hobby.genre.id}" %>">
 <%= @hobby.genre.name %>
-</h5>
+</div>
 <p class="time">
 <%= @hobby.time %>
 </p>

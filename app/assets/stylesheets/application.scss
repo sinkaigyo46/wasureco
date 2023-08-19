@@ -171,24 +171,70 @@ text-decoration: none;
 box-decoration-break: clone;
 justify-content: center;
 font-family: 'Titillium Web', sans-serif;
+
 }
 
 
 .date {
+ text-align: center;
  text-decoration : underline maroon;
  color:black;
 }
 
 .genre {
   font-weight: 500;
-  color :#1f3134;
-  border: #C5C1FF solid 2px;
   text-align: center;
-  background-image: linear-gradient(90deg, rgba(253, 177, 170, 1), rgba(240, 226, 226, 1));
 }
 
 .genre-1 {
-  background-image: #1f3134;
+  border: #C5C1FF solid 2px;
+  color :#1f3134;
+  background-image: linear-gradient(90deg, rgba(253, 177, 170, 1), rgba(240, 226, 226, 1));
+}
+.genre-2 {
+  border: #1f3134 solid 2px;
+  color: #eaf4fc;
+  background-image: radial-gradient(circle, rgba(111, 109, 83, 1), rgba(224, 162, 8, 1) 80%);
+}
+
+.genre-3 {
+  border: #a2d7dd solid 2px;
+  color: #e7e7eb;
+  background-color: #488384;
+}
+
+.genre-4 {
+  border: #deb068 solid 2px;
+  color: #fef4f4;
+  background-color: #96514b;
+}
+
+.genre-5 {
+  border: #f2a0a1 solid 2px;
+  color: #a0d8ef;
+  background-color: #e2041b;
+}
+
+.genre-6 {
+  border:#fffffc solid 2px;
+  color:#fbfaf5;
+  background-color: #007bbb;
+}
+
+.genre-7 {
+  border:#f2f2b0 solid 2px;
+  color:#640125;
+  background-color: #f8e58c;
+}
+
+.genre-8 {
+  border:#e6eae3 solid 2px;
+  color:#f3f3f3;
+  background-color: #b3ada0;
+}
+
+.activity {
+  
 }
 
 .heart {
