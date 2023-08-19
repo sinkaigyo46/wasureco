@@ -108,6 +108,9 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    gretel (4.5.0)
+      actionview (>= 5.1, < 7.1)
+      railties (>= 5.1, < 7.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.2.1)
@@ -264,6 +267,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  gretel
   importmap-rails
   jbuilder
   jquery-rails

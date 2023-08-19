@@ -1,4 +1,5 @@
 <%= render "shared/header" %>
+<% breadcrumb :root, class: "bread" %>
 <div class="index-main">
 <%= link_to(new_hobby_path, class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>投稿</span>
@@ -8,7 +9,7 @@
 <div class="contents">
 <% @hobby.each do |hobby| %>
 <%= link_to hobby_path(hobby) do %>
-<div class="item">
+<div class="item <%= "genre-#{hobby.genre.id}" %>">
 <h3 class="date">
 <%= hobby.date %>
 </h3>

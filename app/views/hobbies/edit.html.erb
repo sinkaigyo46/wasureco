@@ -1,4 +1,5 @@
 <%= render "shared/header" %>
+<% breadcrumb :hobby %>
 <div class="main">
  <%= form_with model: @hobby, url: hobby_path, class: 'form', local: true do |f| %>
   
