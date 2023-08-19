@@ -41,6 +41,7 @@ margin-left: 40px;
 color: gainsboro;
 font-weight: 500;
 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 .fs-5 {
   font-weight: bold;
@@ -84,6 +85,9 @@ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   position: fixed;
   padding: 15px ;
   margin-bottom: 53px;
+}
+.purchase-btn-icon {
+  border-radius: 5%;
 }
 
 
@@ -169,4 +173,20 @@ box-decoration-break: clone;
 .genre {
   font-weight: 400;
   color :rosybrown;
+}
+
+.heart {
+  display: flex;
+  justify-content: end;
+  height: 50px;
+}
+.heart-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.count{
+  display: inline;
+  color:aquamarine;
 }

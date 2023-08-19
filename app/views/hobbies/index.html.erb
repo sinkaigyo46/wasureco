@@ -23,6 +23,11 @@
 <p class="activity">
 <%= hobby.activity %>
 </p>
+<div class="heart">
+<div id="like-btn<%= hobby.id %>">
+<%= render partial: "likes/like", locals:{ hobby: hobby } %>
+</div>
+</div>
 </div>
 <% end %>
 </div>
