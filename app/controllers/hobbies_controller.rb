@@ -15,7 +15,7 @@ class HobbiesController < ApplicationController
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
-     end
+    end
   end
 
   def show
@@ -34,11 +34,9 @@ class HobbiesController < ApplicationController
   end
 
   def destroy
-    @hobby.destroy 
+    @hobby.destroy
     redirect_to root_path
   end
-  
-
 
   private
 

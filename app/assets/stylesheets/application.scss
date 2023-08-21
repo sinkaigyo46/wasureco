@@ -121,13 +121,17 @@ font-weight: 500;
 
 ul {
   list-style: none;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+li {
+  margin-bottom : 10px;
 }
 
 .lavel {
   font-size: 18px;
   font-weight: 600;
-  color: black;
-  font-style: italic;
+  color: #432f2f;
 }
 
 .select {
@@ -140,7 +144,12 @@ ul {
   width: 70px;
   height: 30px;
   border-radius: 20px;
-  
+  text-align: center;
+}
+
+.text-input {
+  width: 200px;
+  height: 120px;
 }
 
 .sign_up {
@@ -177,13 +186,12 @@ ul {
 }
 
 .item {
-margin-left: 60px;
+margin-left: 70px;
 margin-bottom :60px;
 text-decoration: none;
 box-decoration-break: clone;
 justify-content: center;
 font-family: 'Titillium Web', sans-serif;
-
 }
 
 
@@ -248,6 +256,7 @@ font-family: 'Titillium Web', sans-serif;
 .time {
 text-align: end;
 font-size: 20px;
+margin-bottom :15px;
 }
 
 .heart {
@@ -268,7 +277,6 @@ font-size: 20px;
 .count{
   color:yellow;
   display: inline;
-
 }
 
 .show-btn {
@@ -309,6 +317,10 @@ font-size: 20px;
 }
 
 .genre-total-times {
- position: absolute;
- margin-left: 1000px;
+  margin-left : 100px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.genre-total-time  {
+  opacity: 90%;
 }

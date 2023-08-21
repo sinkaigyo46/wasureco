@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-
   def create
     like = current_user.likes.build(hobby_id: params[:hobby_id])
     like.save
@@ -10,7 +9,7 @@ class LikesController < ApplicationController
 
   def destroy
     like = Like.find_by(hobby_id: params[:hobby_id], user_id: current_user.id)
-    like.destroy 
+    like.destroy
     respond_to do |format|
       format.js
     end

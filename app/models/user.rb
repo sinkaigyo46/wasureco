@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :hobbies
   has_many :likes
 
-  validates  :nickname, presence: true
+  validates :nickname, presence: true
 end

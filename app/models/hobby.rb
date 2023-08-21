@@ -7,6 +7,6 @@ class Hobby < ApplicationRecord
   def liked_by?(user)
     likes.where(user_id: user.id).exists?
   end
-  
+
   validates :time, :activity, :date, :genre_id, presence: true
 end
