@@ -7,6 +7,9 @@
 <% end %>
 
 <div class="contents">
+    <% # ジャンルごとの合計時間を計算するためのハッシュを初期化 %>
+    <% genre_total_times = Hash.new(0) %>
+
 <% @hobby.each do |hobby| %>
 <%= link_to hobby_path(hobby) do %>
 <div class="item">
@@ -17,10 +20,10 @@
 <div class="genre <%= "genre-#{hobby.genre.id}" %>">
 <%= hobby.genre.name %>
 </div>
-<p class="time">
+<div class="time">
 <%= hobby.time %>
-</p>
-<div class="activity">気付き</div>
+h
+</div>
 <p class="activity">
 <%= hobby.activity %>
 </p>
@@ -30,9 +33,19 @@
 </div>
 </div>
 </div>
-<% end %>
-</div>
-
+ <% # 各ジャンルの合計時間を更新 %>
+      <% genre_total_times[hobby.genre.id] += hobby.time %>
+      <% end %>
+      
+    <% # 各ジャンルの合計時間を表示 %>
+    <div class="genre-total-times">
+      <% genre_total_times.each do |genre_id, total_time| %>
+        <p class="genre-total-time">
+          <%= Genre.find(genre_id).name %>の合計時間: <%= total_time %>h
+        </p>
+      <% end %>
+    </div>
+  </div>
 </div>
 <%= render "shared/footer" %>
 

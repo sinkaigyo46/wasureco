@@ -21,6 +21,7 @@ body {
 .index-main {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 
@@ -93,7 +94,18 @@ font-weight: 500;
   position: fixed;
   padding: 15px ;
   margin-bottom: 53px;
+  text-decoration: none;
 }
+
+.btn-primary :hover {
+  background-color: #a0d8ef;
+  transition-property: background-color,margin-left;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+}
+
+
 .purchase-btn-icon {
   border-radius: 5%;
 }
@@ -233,8 +245,9 @@ font-family: 'Titillium Web', sans-serif;
   background-color: #b3ada0;
 }
 
-.activity {
-  
+.time {
+text-align: end;
+font-size: 20px;
 }
 
 .heart {
@@ -256,4 +269,46 @@ font-family: 'Titillium Web', sans-serif;
   color:yellow;
   display: inline;
 
+}
+
+.show-btn {
+  margin-top:30px;
+  display: flex;
+  justify-content: end;
+  text-decoration: none;
+  
+}
+
+.show-btn :hover {
+  background-color: #a0d8ef;
+  transition-property: background-color,margin-left;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in;
+  transition-delay: 0ms;
+}
+
+.edit-btn {
+  border: #488384 solid 1px;
+  margin-right: 10px;
+  color :#513743;
+  background-color: #e0ebaf;
+  text-decoration: none;
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.destroy-btn {
+  border: #488384 solid 1px;
+  text-decoration: none;
+  color :#513743;
+  background-color: #e0ebaf;
+  width: 50px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.genre-total-times {
+ position: absolute;
+ margin-left: 1000px;
 }
