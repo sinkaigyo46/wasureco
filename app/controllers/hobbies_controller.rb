@@ -3,6 +3,7 @@ class HobbiesController < ApplicationController
   before_action :set_hobby, only: [:show, :edit, :update, :destroy]
   def index
     @hobby = Hobby.all
+    @genre_total_times_by_month = calculate_genre_total_times_by_month(@hobby)
   end
 
   def new
@@ -46,5 +47,15 @@ class HobbiesController < ApplicationController
 
   def set_hobby
     @hobby = Hobby.find(params[:id])
+  end
+
+  def calculate_genre_total_times_by_month(hobbies)
+    genre_total_times_by_month = Hash.new { |hash, key| hash[key] = Hash.new(0) }
+
+    hobbies.each do |hobby|
+      genre_total_times_by_month[hobby.date.month][hobby.genre_id] += hobby.time
+    end
+
+    genre_total_times_by_month
   end
 end

@@ -1,52 +1,55 @@
 <%= render "shared/header" %>
-  <% breadcrumb :root, class: "bread" %>
+<% breadcrumb :root, class: "bread" %>
 
 <div class="index-main">
   <%= link_to(new_hobby_path, class: 'purchase-btn') do %>
     <span class='purchase-btn-text'>投稿</span>
-      <%= image_tag 'post.png' , size: '70x70' ,class: "purchase-btn-icon" %>
+    <%= image_tag 'post.png', size: '70x70', class: "purchase-btn-icon" %>
   <% end %>
 
-  <div class="contents">
-    <% # ジャンルごとの合計時間を計算するためのハッシュを初期化 %>
-    <% genre_total_times = Hash.new(0) %>
+    <%= month_calendar do |date| %>
+      <div class="date">
+        <%= date %>
+      </div>
 
-    <% @hobby.each do |hobby| %>
-      <div class="item">
+      <% hobbies_for_date = @hobby.select { |h| h.date == date } %>
+      <% hobbies_for_date.each do |hobby| %>
+        <div class="item">  
+          <%= link_to hobby_path(hobby) do %>
+            <div class="genre <%= "genre-#{hobby.genre.id}" %>">
+              <%= hobby.genre.name %>
+            </div>
+          <% end %>
 
-        <%= link_to hobby_path(hobby) do %>
-            <h3 class="date">
-            <%= hobby.date %>
-            </h3>
-        <% end %>
-
-          <div class="genre <%= "genre-#{hobby.genre.id}" %>">
-          <%= hobby.genre.name %>
-          </div>
           <div class="time">
-            <%= hobby.time %>
-            h
+            <%= hobby.time %>h
           </div>
           <p class="activity">
             <%= hobby.activity %>
           </p>
           <div class="heart">
             <div id="like-btn<%= hobby.id %>">
-            <%= render partial: "likes/like", locals:{ hobby: hobby } %>
+              <%= render partial: "likes/like", locals: { hobby: hobby } %>
             </div>
           </div>
-      </div>
-      <% genre_total_times[hobby.genre.id] += hobby.time %>
-    <% end %>
-   </div>   
-  
-    <div class="genre-total-times">
-      <% genre_total_times.each do |genre_id, total_time| %>
-        <p class="genre-total-time">
-          <%= Genre.find(genre_id).name %>の合計時間: <%= total_time %>h
-        </p>
+        </div>
       <% end %>
-    </div>
+    <% end %>
+</div>
+ <div class="genre-total-times">
+    <% @genre_total_times_by_month.each do |month, genre_totals| %>
+      <div class="time-content">
+      <h3><%= month %>月</h3>
+      <div class="genre-total-time">
+        <% genre_totals.each do |genre_id, total_time| %>
+        <div class="genre <%= "genre-#{genre_id}" %>">
+          <%= Genre.find(genre_id).name %>: <%= total_time %>h<br>
+          </div>
+        <% end %>
+
+          </div>
+      </div>
+    <% end %>
+  </div>
 </div>
 <%= render "shared/footer" %>
-

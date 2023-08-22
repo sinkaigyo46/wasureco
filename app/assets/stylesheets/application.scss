@@ -1,10 +1,15 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+@import "simple_calendar";
+
 .bread a{
 text-decoration: none;
   margin-left:20px;
   color: black;
-  
+}
+
+a {
+  text-decoration: none;
 }
 .login-flash-message{
   margin-bottom: 20px;
@@ -22,6 +27,7 @@ body {
   width: 100%;
   height: 100vh;
   position: relative;
+  text-decoration: none;
 }
 
 
@@ -80,23 +86,6 @@ font-weight: 500;
 }
 
 
-.form {
-  margin-bottom: 70px;
-}
-
-.purchase-btn {
-  width: 120px;
-  background: olive;
-  text-align: center;
-  border-radius: 50%;
-  bottom: 32px;
-  right: 32px;
-  position: fixed;
-  padding: 15px ;
-  margin-bottom: 53px;
-  text-decoration: none;
-}
-
 .btn-primary :hover {
   background-color: #a0d8ef;
   transition-property: background-color,margin-left;
@@ -106,10 +95,27 @@ font-weight: 500;
 }
 
 
+.form {
+  margin-bottom: 70px;
+}
+
+.purchase-btn {
+  width: 120px;
+  background: olive;
+  text-align: center;
+  border-radius: 50%;
+  bottom: 93px;
+  right: 10px;
+  position: fixed;
+  padding: 15px ;
+ 
+  box-shadow: 0 0 0 0 16;
+}
+
+
 .purchase-btn-icon {
   border-radius: 5%;
 }
-
 
 .purchase-btn-text {
   color: #fff;
@@ -172,32 +178,18 @@ li {
   flex-direction: column;
 }
 
-.contents {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: 60px 0 0 40px; 
-  border-radius: 5px;
-}
-
 .edit-contents {
   display: flex;
   justify-content: center;
 }
 
 .item {
-margin-left: 70px;
-margin-bottom :60px;
-text-decoration: none;
-box-decoration-break: clone;
-justify-content: center;
 font-family: 'Titillium Web', sans-serif;
 }
 
 
 .date {
  text-align: center;
- text-decoration : underline maroon;
  color:black;
 }
 
@@ -205,6 +197,7 @@ font-family: 'Titillium Web', sans-serif;
   font-weight: 500;
   text-align: center;
 }
+
 
 .genre-1 {
   border: #C5C1FF solid 2px;
@@ -256,13 +249,11 @@ font-family: 'Titillium Web', sans-serif;
 .time {
 text-align: end;
 font-size: 20px;
-margin-bottom :15px;
 }
 
 .heart {
   display: flex;
   justify-content: end;
-  height: 50px;
 }
 .heart a {
   text-decoration: none;
@@ -271,11 +262,11 @@ margin-bottom :15px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin:0 1px 5px 0;
+  margin-bottom: 2px;
 }
 
 .count{
-  color:yellow;
+  color:#ea5506;
   display: inline;
 }
 
@@ -316,11 +307,47 @@ margin-bottom :15px;
   border-radius: 5px;
 }
 
-.genre-total-times {
-  margin-left : 100px;
-  font-family: 'Titillium Web', sans-serif;
+
+.simple-calendar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.genre-total-time  {
-  opacity: 90%;
+.calendar-month {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.calendar-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+  width: calc(100% / 7);
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+}
+
+.genre-total-times {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-self: start;
+}
+
+.time-content {
+
+  width: 300px;
 }

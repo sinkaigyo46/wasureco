@@ -8,5 +8,5 @@ class Hobby < ApplicationRecord
     likes.where(user_id: user.id).exists?
   end
 
-  validates :time, :activity, :date, :genre_id, presence: true
+  validates :time, :date, :genre_id, presence: true
 end
