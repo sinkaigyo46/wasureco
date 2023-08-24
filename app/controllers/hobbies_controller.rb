@@ -42,7 +42,7 @@ class HobbiesController < ApplicationController
   private
 
   def hobby_params
-    params.require(:hobby).permit(:genre_id, :activity, :date, :time).merge(user_id: current_user.id)
+    params.require(:hobby).permit(:genre_id, :activity, :date, :hour).merge(user_id: current_user.id)
   end
 
   def set_hobby
@@ -53,7 +53,7 @@ class HobbiesController < ApplicationController
     genre_total_times_by_month = Hash.new { |hash, key| hash[key] = Hash.new(0) }
 
     hobbies.each do |hobby|
-      genre_total_times_by_month[hobby.date.month][hobby.genre_id] += hobby.time
+      genre_total_times_by_month[hobby.date.month][hobby.genre_id] += hobby.hour
     end
 
     genre_total_times_by_month
