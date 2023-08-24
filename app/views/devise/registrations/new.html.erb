@@ -1,12 +1,4 @@
-  <header>
-  <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <span class="fs-1" >Wasureco</span>
-      </a>
-
-  </div>
-  </header>
+<%= render 'shared/second-header' %>
 <div class="main">
  <div class="sign_up">
 <div class="sign_up_title">
@@ -19,7 +11,7 @@ Sign up
    <%= render "shared/error_messages", model: f.object %>
 
    <div class="field">
-    <%= f.label :nickname %>
+    <%= f.label :ニックネーム %>
     <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
   </div>
 
@@ -29,9 +21,9 @@ Sign up
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :パスワード %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    (<%= @minimum_password_length %> 文字以上)
     <% end %>
     <div class="field">
     <%= f.password_field :password, autocomplete: "new-password" %>
@@ -39,7 +31,7 @@ Sign up
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %>
+    <%= f.label :パスワード（再） %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
