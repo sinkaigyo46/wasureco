@@ -1,11 +1,5 @@
-<header>
-  <div class="container">
-   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
- <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-        <span class="fs-1" >Wasureco</span>
-      </a>
-      </div>
-      </header>
+<%= render 'shared/second-header' %>
+
 
 <div class="main">
  <div class="sign_up">
@@ -26,7 +20,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :パスワード %>
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
 
@@ -36,12 +30,13 @@
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
+ <div class="action">
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
-<% end %>
-
-</div>
+    </div>
+   <div class="action2"><%= link_to '新規登録', new_user_registration_path %></div>
+  <% end %>
+  </div>
 </div>
 <%= render "shared/footer" %>

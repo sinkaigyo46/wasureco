@@ -1,0 +1,18 @@
+ja:
+  simple_calendar:
+    previous: "<<<"
+    next: ">>>"
+
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+
+      hobby:
+        date: 日付
+        time: 時間
+    
+        
+
+      
+

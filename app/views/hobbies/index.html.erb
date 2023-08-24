@@ -9,7 +9,7 @@
 
     <%= month_calendar do |date| %>
       <div class="date">
-        <%= date %>
+        <%= date.day %>
       </div>
 
       <% hobbies_for_date = @hobby.select { |h| h.date == date } %>

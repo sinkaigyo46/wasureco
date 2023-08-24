@@ -1,6 +1,7 @@
-<%= render "shared/header" %>
+<%= render 'shared/second-header' %>
 <div class="main">
  <%= form_with model: @hobby, url: hobbies_path, class: 'form', local: true do |f| %>
+ <%= render "shared/error_messages", model: f.object %>
   <ul class="form-list">
     <li>
     <%= f.label :日付, class: 'lavel' %> <br >

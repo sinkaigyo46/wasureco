@@ -1,5 +1,5 @@
 class HobbiesController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
+  before_action :authenticate_user!, only: [:new, :show, :edit, :destroy]
   before_action :set_hobby, only: [:show, :edit, :update, :destroy]
   def index
     @hobby = Hobby.all
@@ -42,7 +42,7 @@ class HobbiesController < ApplicationController
   private
 
   def hobby_params
-    params.require(:hobby).permit(:genre_id, :activity, :time, :date).merge(user_id: current_user.id)
+    params.require(:hobby).permit(:genre_id, :activity, :date, :time).merge(user_id: current_user.id)
   end
 
   def set_hobby
