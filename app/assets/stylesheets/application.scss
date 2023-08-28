@@ -7,7 +7,6 @@ a {
   text-decoration: none;
 }
 
-
 .footer{
   width: 100vw;
 }
@@ -32,6 +31,7 @@ body {
 }
 
 // ログイン、サインアップ機能 ////////////////////////////
+
 .action {
   display: flex;
   justify-content: center;
@@ -59,8 +59,7 @@ body {
 font-size: 40px;
 color :gold;
 margin-bottom: 10px;
-}
-// 
+} 
 .fs-1 {
 margin-left: 40px;
 color: #9d5b8b;
@@ -81,9 +80,19 @@ line-height: 1.3;
 background: #aacf53;
 vertical-align: middle;
 border-radius: 60px 0;
-box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
+box-shadow: 0 15px 15px rgba(0, 0, 0, .5);
 }
 
+.fs-1:hover {
+ background-color: #9d5b8b;
+ color: #aacf53;
+ box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+ transition: all 200ms ease 0ms;
+}
+.fs-1:active {
+  border: 0;
+  bottom :80px;
+}
 .registration-main{
   display: flex;
   flex-direction: column;
@@ -146,32 +155,42 @@ box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
 }
 
 .purchase-btn {
-  width: 120px;
+  color:#302833;
+  width: 105px;
+  height: 105px;
   background: #e6b422;
   text-align: center;
   border-radius: 50%;
   bottom: 93px;
   right: 10px;
   position: fixed;
-  padding: 15px ;
-  box-shadow: 0 0 0 0 16;
+  padding: 15px;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.5), inset -10px -6px 10px -2px rgba(0, 0, 0, 0.3);
 }
 
 .purchase-btn:hover {
-  background-color: #745399;
+  box-shadow: 0px 3px 3px 0px rgba(241, 235, 235, 0.997), inset -10px -6px 10px -2px #f4eded;
+  color:#302833;
   transition: all 500ms ease 0ms;
+  color: #eaf4fc;
+
+}
+
+.purchase-btn:active {
+  border: 0;
+  bottom: 75px;
 }
 
 .purchase-btn-icon {
-  border-radius: 5%;
+  border-radius: 50%;
+  background-color: #e6b422;
 }
 
 .purchase-btn-text {
-  color: #fff;
   display: block;
   font-size: 18px;
   text-decoration: none;
-  margin-bottom: 5px;
+  
 }
 
 ul {
@@ -288,18 +307,6 @@ font-size: 20px;
 text-decoration: underline #80989b;
 }
 
-// .heart {
-//   display: flex;
-//   justify-content: end;
-// }
-
-// .heart-btn {
-//   width: 30px;
-//   height: 30px;
-//   border-radius: 50%;
-//   margin-bottom: 2px;
-// }
-
 .count{
   color:#ea5506;
   display: inline;
@@ -403,8 +410,24 @@ thead {
   justify-content: center;
   flex-wrap: wrap;
   justify-self: start;
+  margin-bottom: 400px;
 }
 
 .time-content {
   width: 300px;
+}
+
+.total-time-title {
+  margin-right: 30px;
+}
+
+.y-m {
+  display: flex;
+}
+
+.month-list {
+  width: 300px;
+}
+.total-contents {
+  margin: 20px 30px ;
 }

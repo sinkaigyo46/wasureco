@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_18_082654) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_13_121728) do
   create_table "hobbies", charset: "utf8", force: :cascade do |t|
     t.integer "genre_id", null: false
     t.date "date", null: false
@@ -20,15 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_18_082654) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_hobbies_on_user_id"
-  end
-
-  create_table "likes", charset: "utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "hobby_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["hobby_id"], name: "index_likes_on_hobby_id"
-    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
@@ -45,6 +36,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_18_082654) do
   end
 
   add_foreign_key "hobbies", "users"
-  add_foreign_key "likes", "hobbies"
-  add_foreign_key "likes", "users"
 end

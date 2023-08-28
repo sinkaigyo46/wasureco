@@ -4,7 +4,7 @@
 <div class="index-main">
   <%= link_to(new_hobby_path, class: 'purchase-btn') do %>
     <span class='purchase-btn-text'>投稿</span>
-    <%= image_tag 'post.png', size: '70x70', class: "purchase-btn-icon" %>
+    <%= image_tag 'star-.png', size: '50x50', class: "purchase-btn-icon" %>
   <% end %>
 
     <%= month_calendar do |date| %>
@@ -14,6 +14,7 @@
 
       <% hobbies_for_date = @hobby.select { |h| h.date == date } %>
       <% hobbies_for_date.each do |hobby| %>
+      <% if user_signed_in? && current_user.id == hobby.user.id %>
         <div class="item">  
           <%= link_to hobby_path(hobby) do %>
             <div class="genre <%= "genre-#{hobby.genre.id}" %>">
@@ -27,29 +28,35 @@
           <p class="activity">
             <%= hobby.activity %>
           </p>
-          <%# <div class="heart">
-            <%# <div id="like-btn<%= hobby.id  %>
-              <%# <%= render partial: "likes/like", locals: { hobby: hobby } %>
-            <%# </div>
-          </div>  %>
+          <% end %>
         </div>
       <% end %>
     <% end %>
 </div>
- <div class="genre-total-times">
-    <% @genre_total_times_by_month.each do |month, genre_totals| %>
-      <div class="time-content">
-      <h3><%= month %>月</h3>
-      <div class="genre-total-time">
-        <% genre_totals.each do |genre_id, total_time| %>
-        <div class="genre <%= "genre-#{genre_id}" %>">
-          <%= Genre.find(genre_id).name %>: <%= total_time %>h<br>
-          </div>
-        <% end %>
 
+<% if user_signed_in? %>
+  <div class="genre-total-times">
+    <% @genre_total_times_by_year_and_month.each do |year, month_data| %>
+     <div class="total-contents">
+      <h2><%= year %>年</h2>
+      <% month_data.each do |month, genre_data| %>
+        <div class="time-content">
+          <h3><%= month %>月</h3>
+          <div class="genre-total-time">
+            <% genre_data.sort_by { |_, data| data[:genre].display_order }.each do |genre_id, data| %>
+              <div class="genre <%= "genre-#{genre_id}" %>">
+                <%= data[:genre].name %>: <%= data[:total_time] %>h<br>
+              </div>
+            <% end %>
           </div>
-      </div>
+        </div>
+      <% end %>
+          </div>
     <% end %>
   </div>
+<% end %>
+
+
 </div>
+
 <%= render "shared/footer" %>

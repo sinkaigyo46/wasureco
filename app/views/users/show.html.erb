@@ -1,4 +1,28 @@
 <%= render "shared/header" %>
 <div class="main">
+  <% if user_signed_in? && current_user.id == @user.id %>
+    <div class="total-time-title"><h2>合計時間</h2></div>
+    <div class="y-m">
+      <% @user_total_times_by_year_and_month.each do |year, months| %>
+        <div class="total-time">
+          <h3><%= year %>年</h3>
+          <ul class="month-list">
+            <% months.each do |month, genre_totals| %>
+              <li><%= month %>月</li>
+              <ul>
+                <div class="genre-total-time">
+                  <% genre_totals.sort_by { |genre_id, data| data[:genre].display_order }.each do |genre_id, data| %>
+                    <div class="genre <%= "genre-#{genre_id}" %>">
+                      <%= data[:genre].name %>: <%= data[:total_time] %>h<br>
+                    </div>
+                  <% end %>
+                </div>
+              </ul>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 </div>
 <%= render "shared/footer" %>
