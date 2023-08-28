@@ -11,6 +11,7 @@ ja:
       hobby:
         date: 日付
         time: 時間
+        genre_id: ジャンル
     
         
 

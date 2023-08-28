@@ -3,9 +3,10 @@ class HobbiesController < ApplicationController
   before_action :set_hobby, only: [:show, :edit, :update, :destroy]
 
   def index
-    @hobby = Hobby.all.order(date: :asc) 
-    @genre_total_times_by_year_and_month = calculate_user_genre_total_times_by_year_and_month(current_user.hobbies) if user_signed_in?
+    @hobby = Hobby.all.order(date: :asc)
+    return unless user_signed_in?
 
+    @genre_total_times_by_year_and_month = calculate_user_genre_total_times_by_year_and_month(current_user.hobbies)
   end
 
   def new
@@ -50,10 +51,14 @@ class HobbiesController < ApplicationController
   def set_hobby
     @hobby = Hobby.find(params[:id])
   end
-  
+
   def calculate_user_genre_total_times_by_year_and_month(hobbies)
-    genre_total_times_by_year_and_month = Hash.new { |hash, year| hash[year] = Hash.new { |inner_hash, month| inner_hash[month] = {} } }
-  
+    genre_total_times_by_year_and_month = Hash.new do |hash, year|
+      hash[year] = Hash.new do |inner_hash, month|
+        inner_hash[month] = {}
+      end
+    end
+
     hobbies.order(date: :desc).each do |hobby|  # 日付順にソートして取得
       year = hobby.date.year
       month = hobby.date.month
@@ -61,8 +66,7 @@ class HobbiesController < ApplicationController
       genre_total_times_by_year_and_month[year][month][genre_id] ||= { total_time: 0, genre: Genre.find(genre_id) }
       genre_total_times_by_year_and_month[year][month][genre_id][:total_time] += hobby.time
     end
-  
+
     genre_total_times_by_year_and_month
   end
-  
 end
