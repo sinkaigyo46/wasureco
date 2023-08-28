@@ -81,3 +81,6 @@ gem 'pry-rails'
 gem 'gretel'
 gem "simple_calendar", "~> 2.4"
 gem 'rails-i18n'
+gem 'rspec'
+gem 'factory_bot_rails'
+gem 'faker'

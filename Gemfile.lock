@@ -105,8 +105,16 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    diff-lcs (1.5.0)
     erubi (1.12.0)
     execjs (2.8.1)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
+    faker (3.2.1)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -218,6 +226,19 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.6)
+    rspec (3.12.0)
+      rspec-core (~> 3.12.0)
+      rspec-expectations (~> 3.12.0)
+      rspec-mocks (~> 3.12.0)
+    rspec-core (3.12.2)
+      rspec-support (~> 3.12.0)
+    rspec-expectations (3.12.3)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-mocks (3.12.6)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.12.0)
+    rspec-support (3.12.1)
     rubocop (1.56.1)
       base64 (~> 0.1.1)
       json (~> 2.3)
@@ -297,6 +318,8 @@ DEPENDENCIES
   capybara
   debug
   devise
+  factory_bot_rails
+  faker
   gretel
   importmap-rails
   jbuilder
@@ -307,6 +330,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.0)
   rails-i18n
+  rspec
   rubocop
   selenium-webdriver
   simple_calendar (~> 2.4)
