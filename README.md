@@ -27,7 +27,7 @@ https://wasureco.onrender.com/
 [![Image from Gyazo](https://i.gyazo.com/b5f056fcadc6999cc054041e941c3605.png)](https://gyazo.com/b5f056fcadc6999cc054041e941c3605)
 
 # 実装予定の機能
-・他ユーザーと記録をシェアできる機能
+・他ユーザーと記録をシェアできる機能  
 ・SNS認証でのログイン機能
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/9dd4ea4bc14cfe4f54a5e5d22d0fb7b8.png)](https://gyazo.com/9dd4ea4bc14cfe4f54a5e5d22d0fb7b8)
