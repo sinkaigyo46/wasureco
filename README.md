@@ -23,7 +23,8 @@ https://wasureco.onrender.com/
 # 洗い出した要件
 要件定義シート  https://docs.google.com/spreadsheets/d/1pv8J6L6ywq4Wp7xUjUuWfCEyhQ-wUMVvH3Hf6eko_1A/edit?usp=sharing  
 # 実装した機能についての画像や動画
-[![Image from Gyazo](https://i.gyazo.com/52a6a6bdc012571423e7cfe7f570b5a1.jpg)](https://gyazo.com/52a6a6bdc012571423e7cfe7f570b5a1)  [![Image from Gyazo](https://i.gyazo.com/7df5a8da026e8ac3bf70b12e479376b5.gif)](https://gyazo.com/7df5a8da026e8ac3bf70b12e479376b5)
+[![Image from Gyazo](https://i.gyazo.com/52a6a6bdc012571423e7cfe7f570b5a1.jpg)](https://gyazo.com/52a6a6bdc012571423e7cfe7f570b5a1)  
+[![Image from Gyazo](https://i.gyazo.com/7df5a8da026e8ac3bf70b12e479376b5.gif)](https://gyazo.com/7df5a8da026e8ac3bf70b12e479376b5)
 # 実装予定の機能
 ・他ユーザーと記録をシェアできる機能
 ・SNS認証でのログイン機能
