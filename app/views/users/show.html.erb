@@ -10,13 +10,13 @@
             <% months.each do |month, genre_totals| %>
               <li><%= month %>月</li>
               <ul>
-                <div class="genre-total-time">
                   <% genre_totals.sort_by { |genre_id, data| data[:genre].display_order }.each do |genre_id, data| %>
+                  <div class="genre-total-time">
                     <div class="genre <%= "genre-#{genre_id}" %>">
                       <%= data[:genre].name %>: <%= data[:total_time] %>h<br>
                     </div>
-                  <% end %>
                 </div>
+                  <% end %>
               </ul>
             <% end %>
           </ul>

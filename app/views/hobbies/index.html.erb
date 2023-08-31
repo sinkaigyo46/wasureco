@@ -6,6 +6,7 @@
     <span class='purchase-btn-text'>投稿</span>
     <%= image_tag 'star-.png', size: '50x50', class: "purchase-btn-icon" %>
   <% end %>
+  
   <div class="calendar-content">
     <%= month_calendar do |date| %>
       <div class="date">
@@ -32,14 +33,11 @@
         </div>
       <% end %>
     <% end %>
-    </div>
-  </div>
 
-<% if user_signed_in? %>
-  <div class="totatime-content">
   <div class="genre-total-times">
-    <% @genre_total_times_by_year_and_month.each do |year, month_data| %>
      <div class="total-contents">
+<% if user_signed_in? %>
+    <% @genre_total_times_by_year_and_month.each do |year, month_data| %>
       <h2><%= year %>年</h2>
       <% month_data.each do |month, genre_data| %>
         <div class="time-content">
@@ -53,14 +51,10 @@
               </div>
             <% end %>
           </div>
-        </div>
       <% end %>
-          </div>
     <% end %>
-  </div>
+        </div>
 <% end %>
+        </div>
 </div>
-
-</div>
-
 <%= render "shared/footer" %>

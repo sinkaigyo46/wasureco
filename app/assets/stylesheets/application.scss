@@ -7,23 +7,15 @@ a {
   text-decoration: none;
 }
 
-.footer{
-  width: 100vw;
-}
-
 body {
   background: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
   font-family: 'Titillium Web', sans-serif;
 }
 
 .index-main {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
 }
 
 .main {
-  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -351,7 +343,7 @@ text-decoration: underline #80989b;
 
 .simple-calendar {
   width: 90%;
-  margin: 0 auto;
+  margin: 100px auto 50px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -409,6 +401,11 @@ thead {
   justify-content: center;
   flex-wrap: wrap;
   justify-self: start;
+  margin-bottom: 50px ;
+}
+
+.genre-total-time {
+  margin-bottom:5px;
 }
 
 .time-content {
@@ -430,6 +427,7 @@ thead {
 .month-list {
   width: 300px;
 }
+
 .total-contents {
   margin: 20px 30px ;
 }
