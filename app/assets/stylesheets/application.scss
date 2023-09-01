@@ -12,6 +12,7 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
+
 .index-main {
 }
 
@@ -343,7 +344,7 @@ text-decoration: underline #80989b;
 
 .simple-calendar {
   width: 90%;
-  margin: 100px auto 50px;
+  margin: 100px auto 150px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -414,6 +415,7 @@ thead {
 
 .genre-item {
   margin-bottom: 5px;
+  margin-right: 20px;
 }
 
 .total-time-title {

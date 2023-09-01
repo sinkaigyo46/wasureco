@@ -32,11 +32,11 @@
         </div>
       <% end %>
     <% end %>
-
-  <div class="genre-total-times">
-     <div class="total-contents">
+    </div>
+  
 <% if user_signed_in? %>
     <% @genre_total_times_by_year_and_month.each do |year, month_data| %>
+    <div class="genre-total-times">
       <h2><%= year %>年</h2>
       <% month_data.each do |month, genre_data| %>
         <div class="time-content">
@@ -49,11 +49,14 @@
                 </div>
               </div>
             <% end %>
-          </div>
+              </div>
+            </div>
       <% end %>
+          </div>
     <% end %>
 <% end %>
-        </div>
-        </div>
-</div>
+ </div>
+ 
+
+
 <%= render "shared/footer" %>
