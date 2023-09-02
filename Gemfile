@@ -84,4 +84,6 @@ gem 'pry-rails'
 gem 'gretel'
 gem "simple_calendar", "~> 2.4"
 gem 'rails-i18n'
-
+gem 'omniauth-google-oauth2'
+gem "omniauth-rails_csrf_protection"
+gem 'omniauth', '~>1.9.1'
