@@ -1,12 +1,6 @@
 class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   
    def google_oauth2
-    authorization
-   end
-  
-   private
-  
-   def authorization
     sns_info = User.from_omniauth(request.env["omniauth.auth"])
     @user = sns_info[:user]
 
@@ -17,5 +11,5 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       render template: 'devise/registrations/new'
     end
    end
-
+  
 end
