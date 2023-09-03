@@ -1,6 +1,7 @@
 <%= render "shared/header" %>
 <% breadcrumb :root, class: "bread" %>
 <div class="index-main">
+  <div class="main-contents">
   <%= link_to(new_hobby_path, class: 'purchase-btn') do %>
     <span class='purchase-btn-text'>投稿</span>
     <%= image_tag 'star-.png', size: '50x50', class: "purchase-btn-icon" %>
@@ -36,8 +37,10 @@
   
 <% if user_signed_in? %>
     <% @genre_total_times_by_year_and_month.each do |year, month_data| %>
-    <div class="genre-total-times">
+     <div class="year"> 
       <h2><%= year %>年</h2>
+      </div>
+      <div class="genre-total-times">
       <% month_data.each do |month, genre_data| %>
         <div class="time-content">
           <h3><%= month %>月</h3>
@@ -55,8 +58,8 @@
           </div>
     <% end %>
 <% end %>
- </div>
- 
 
+ </div>
+</div>
 
 <%= render "shared/footer" %>

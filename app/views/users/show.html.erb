@@ -1,7 +1,11 @@
 <%= render "shared/header" %>
-<div class="main">
+ <div class="show-main">
+
+ <div class="show-contents">
   <% if user_signed_in? && current_user.id == @user.id %>
-    <div class="total-time-title"><h2>合計時間</h2></div>
+    <div class="total-time-title">
+    <h2>合計時間</h2>
+    </div>
     <div class="y-m">
       <% @user_total_times_by_year_and_month.each do |year, months| %>
         <div class="total-time">
@@ -24,5 +28,7 @@
       <% end %>
     </div>
   <% end %>
+   </div> 
+
 </div>
 <%= render "shared/footer" %>
