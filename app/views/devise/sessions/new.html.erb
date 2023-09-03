@@ -34,6 +34,9 @@
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
+  <div class="google-login">
+  <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+  </div>
     </div>
    <div class="action2"><%= link_to '新規登録', new_user_registration_path %></div>
   <% end %>
