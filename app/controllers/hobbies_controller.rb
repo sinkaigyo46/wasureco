@@ -1,5 +1,6 @@
 class HobbiesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :show, :edit, :destroy]
+  before_action :move_to_index, only: [:show, :edit]
   before_action :set_hobby, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -48,6 +49,13 @@ class HobbiesController < ApplicationController
     params.require(:hobby).permit(:genre_id, :activity, :date, :time).merge(user_id: current_user.id)
   end
 
+  def move_to_index
+    hobby = Hobby.find(params[:id])
+    return if hobby.user_id == current_user.id
+
+    redirect_to action: :index
+  end
+
   def set_hobby
     @hobby = Hobby.find(params[:id])
   end
@@ -59,7 +67,7 @@ class HobbiesController < ApplicationController
       end
     end
 
-    hobbies.order(date: :desc).each do |hobby|  # 日付順にソートして取得
+    hobbies.order(date: :desc).each do |hobby|
       year = hobby.date.year
       month = hobby.date.month
       genre_id = hobby.genre_id
