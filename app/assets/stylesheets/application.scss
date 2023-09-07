@@ -14,15 +14,12 @@ body {
   font-family: 'Titillium Web', sans-serif;
 }
 
-
-
 .main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 
 .index-main {
   height: 100vh;
@@ -42,7 +39,8 @@ body {
   flex-grow: 1;
   overflow-y: auto;
 }
-// ログイン、サインアップ機能 ////////////////////////////
+
+// ログイン、サインアップ機能 //////////////////////////////////
 // 
 
 .action {
@@ -127,6 +125,7 @@ margin-bottom: 10px;
 .title-image {
   margin-bottom: 2px;
 }
+
 .fs-1 {
   margin-left: 40px;
   color: #9d5b8b;
@@ -156,10 +155,12 @@ margin-bottom: 10px;
    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
    transition: all 200ms ease 0ms;
   }
+
   .fs-1:active {
     border: 0;
     bottom :80px;
   }
+
 .fs-5 {
   font-weight: bold;
   color: #302833;
@@ -175,7 +176,6 @@ margin-bottom: 10px;
 .col-md-3 {
   align-items: center;
   margin:20px 40px 0 0;
-
 }
 
 .btn-outline-primary {
@@ -195,6 +195,7 @@ margin-bottom: 10px;
   color: #16160e; 
   background-color: #2ca9e1;
 }
+
 .btn-primary{
  color: whitesmoke;
  background-color: #38b48b;
@@ -228,7 +229,6 @@ margin-bottom: 10px;
   color:#302833;
   transition: all 500ms ease 0ms;
   color: #eaf4fc;
-
 }
 
 .purchase-btn:active {
@@ -245,7 +245,6 @@ margin-bottom: 10px;
   display: block;
   font-size: 18px;
   text-decoration: none;
-  
 }
 
 ul {
@@ -299,7 +298,6 @@ li {
 font-family: 'Titillium Web', sans-serif;
 }
 
-
 .date {
  text-align: center;
  color:black;
@@ -315,6 +313,7 @@ font-family: 'Titillium Web', sans-serif;
   color :#1f3134;
   background-image: linear-gradient(90deg, rgba(253, 177, 170, 1), rgba(240, 226, 226, 1));
 }
+
 .genre-2 {
   border: #1f3134 solid 0.5px;
   color: #eaf4fc;
@@ -460,8 +459,7 @@ thead {
 }
 
 // 合計時間表示機能 ///////////////////////////////////////////////////
-
-
+//
 
 .year {
  margin:0 0 20px 80px;
@@ -501,7 +499,6 @@ thead {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  
 }
 
 .month-list {
