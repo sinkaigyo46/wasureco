@@ -1,27 +1,28 @@
 <%= render 'shared/second-header' %>
 
 <% breadcrumb :hobbies %>
+
 <div class="main">
   <div class="edit-contents">
     <div class="edit-item">
       <h3 class="date">
-         <%= @hobby.date %>
+        <%= @hobby.date %>
       </h3>
-  <div class="genre <%= "genre-#{@hobby.genre.id}" %>">
-    <%= @hobby.genre.name %>
-  </div>
+      <div class="genre <%= "genre-#{@hobby.genre.id}" %>">
+        <%= @hobby.genre.name %>
+      </div>
       <p class="time">
-        <%= @hobby.time %>
-        h
+        <%= @hobby.time %>h
       </p>
       <p class="activity">      
         <%= @hobby.activity %>
       </p>
       <div class="show-btn">
-  <%= link_to '編集', edit_hobby_path, method: :get, class:"edit-btn" %>
-  <%= link_to '削除', hobby_path(@hobby.id), data: { turbo_method: :delete }, class:"destroy-btn" %>
+        <%= link_to '編集', edit_hobby_path, method: :get, class: "edit-btn" %>
+        <%= link_to '削除', hobby_path(@hobby.id), data: { turbo_method: :delete }, class: "destroy-btn" %>
       </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
 <%= render "shared/footer" %>
