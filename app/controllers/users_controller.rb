@@ -8,14 +8,12 @@ class UsersController < ApplicationController
 
   private
 
-
   def move_to_index
-       user = User.find(params[:id])
-    if current_user.nil? || user.id != current_user.id
-      redirect_to root_path
-    end
-  end
+    user = User.find(params[:id])
+    return unless current_user.nil? || user.id != current_user.id
 
+    redirect_to root_path
+  end
 
   def calculate_user_genre_total_times_by_year_and_month(hobbies)
     genre_total_times_by_year_and_month = Hash.new do |hash, year|
@@ -24,7 +22,7 @@ class UsersController < ApplicationController
       end
     end
 
-    hobbies.order(date: :desc).each do |hobby|  # 日付順にソートして取得
+    hobbies.order(date: :desc).each do |hobby|
       year = hobby.date.year
       month = hobby.date.month
       genre_id = hobby.genre_id
