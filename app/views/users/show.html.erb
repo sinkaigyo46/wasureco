@@ -2,6 +2,13 @@
  <div class="show-main">
 
  <div class="show-contents">
+ <%= search_form_for @q, url: search_users_path do |f| %>
+  <%= f.label :nickname_cont, 'ユーザー名' %>
+  <%= f.search_field :nickname_cont %>
+  <br>
+  <%= f.submit '検索' %>
+<% end %>
+
   <% if user_signed_in? && current_user.id == @user.id %>
     <div class="total-time-title">
     <h2>合計時間</h2>

@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+<div class="seach-main">
+<%= search_form_for @q, url: search_hobbies_path, html: { id: "detailed-search-form" } do |f| %>
+    <div class="search-field">
+      <%= f.text_field :user_nickname_cont, placeholder: 'ユーザー名' %>
+    </div>
+    <%= f.submit '検索' %>
+  <% end %>
+</div>
+</div>
+
+
+
+
+<%= render "shared/footer" %>
