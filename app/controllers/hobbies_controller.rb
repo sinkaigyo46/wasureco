@@ -45,9 +45,9 @@ class HobbiesController < ApplicationController
   end
 
   def search
-    @q = Hobby.ransack(params[:q])
-    @hobbies = @q.result
-  
+    @q = User.ransack(params[:q])
+    @users = @q.result
+    @hobby = Hobby.all.order(date: :asc)
   end
 
 
