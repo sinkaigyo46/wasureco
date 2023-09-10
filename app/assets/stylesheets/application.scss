@@ -511,5 +511,13 @@ thead {
 //
 
 .seach-main {
+  align-items: center;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.search-user{
+  color: #0d0015;
+  border-bottom: #9d5b8b solid 1px;
 }

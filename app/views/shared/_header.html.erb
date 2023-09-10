@@ -7,7 +7,7 @@
         </div>
       </a>
 
-     <%= link_to 'ユーザー検索', search_hobbies_path%>
+    
        <div class="col-md-3 text-end">
        <% if user_signed_in? %>
         <%= link_to current_user.nickname, user_path(current_user.id), class: "fs-5" %>
