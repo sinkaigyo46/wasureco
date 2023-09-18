@@ -510,7 +510,11 @@ thead {
 // 検索画面//////////////////////////////////////////
 //
 
-.seach-main {
+.search-btn {
+  border-radius: 50px;
+}
+
+.search-main {
   align-items: center;
   height: 100vh;
   display: flex;
