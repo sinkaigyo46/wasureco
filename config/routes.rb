@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   }
   
   root to: "hobbies#index"
-  resources :hobbies do
+
+  resources :hobbies, only: [:index,:new, :create, :show, :edit, :update,:destroy] do
+    collection do
+      get 'search'
+    end
+  
     resource :likes, only: [:create, :destroy]
   end
   resources :users, only: :show

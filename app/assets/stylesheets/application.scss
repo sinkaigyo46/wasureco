@@ -515,3 +515,22 @@ thead {
   width: 300px;
   margin: 20px 0px 50px 0px;
 }
+
+// 検索画面//////////////////////////////////////////
+//
+
+.search-btn {
+  border-radius: 50px;
+}
+
+.search-main {
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.search-user{
+  color: #0d0015;
+  border-bottom: #9d5b8b solid 1px;
+}

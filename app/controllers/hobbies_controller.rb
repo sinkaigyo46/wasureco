@@ -2,6 +2,7 @@ class HobbiesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :show, :edit, :destroy]
   before_action :move_to_index, only: [:show, :edit]
   before_action :set_hobby, only: [:show, :edit, :update, :destroy]
+ 
 
   def index
     @hobby = Hobby.all.order(date: :asc)
@@ -42,6 +43,13 @@ class HobbiesController < ApplicationController
     @hobby.destroy
     redirect_to root_path
   end
+
+  def search
+    @q = User.ransack(params[:q])
+    @users = @q.result
+    @hobby = Hobby.all.order(date: :asc)
+  end
+
 
   private
 
