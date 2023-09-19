@@ -4,8 +4,9 @@
  <div class="show-contents">
 
     <div class="total-time-title">
-    <h2>合計時間</h2>
+    <h2><span><%= @user.nickname %></span>の合計時間<h2>
     </div>
+    
     <div class="y-m">
       <% @user_total_times_by_year_and_month.each do |year, months| %>
         <div class="total-time">
