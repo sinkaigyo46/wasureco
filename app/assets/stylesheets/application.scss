@@ -99,9 +99,8 @@ body {
   height: 100vh;
   background-color: #00c2bc;
   z-index: 100px;
-  /* 環境によって「z-index」追加 */
 }
-/* 読み込み完了後に「loaded」を付与する */
+
 #spinner.loaded {
   animation: fadeOut 3s forwards;
 }
