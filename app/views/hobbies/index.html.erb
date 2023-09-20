@@ -3,8 +3,19 @@
 
 <div class="index-main">
 
+<% if !user_signed_in? && !cookies[:loader_displayed] %>
+  <div id="loader">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+  <% cookies[:loader_displayed] = { value: "true", expires: 5.minutes.from_now } %>
+<% end %>
+
   <div class="main-contents">
- 
+
     <%= link_to(new_hobby_path, class: 'purchase-btn') do %>
       <span class='purchase-btn-text'>投稿</span>
       <%= image_tag 'star-.png', size: '50x50', class: "purchase-btn-icon" %>
