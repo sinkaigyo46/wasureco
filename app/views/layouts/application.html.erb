@@ -14,6 +14,17 @@
   </head>
 
   <body>
+
+<% if !user_signed_in? && !cookies[:loader_displayed] %>
+  <div id="loader">
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+  <% cookies[:loader_displayed] = { value: "true", expires: 5.minutes.from_now } %>
+<% end %>
    <%= breadcrumbs separator: " &rsaquo; " %>   
     <%= yield %>
   </body>

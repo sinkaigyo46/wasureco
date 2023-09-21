@@ -53,6 +53,14 @@ body {
   }
 }
 
+#loader {
+  width: 100%;
+  height: 125.8%;
+  position: absolute;
+  background-color: #00a497;
+  z-index:1000;
+}
+
 #loader.loaded {
   animation: fadeOut 4s forwards;
 }
@@ -62,7 +70,7 @@ body {
   width: 70px;
   text-align: center;
   position: absolute;
-  top: -5%;
+  top: 30%;
   left: 46%;
   z-index: 1000; 
 }
