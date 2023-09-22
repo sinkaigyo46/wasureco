@@ -7,8 +7,8 @@ class User < ApplicationRecord
   has_many :sns_credentials
   validates :nickname, presence: true
 
-  def self.ransackable_attributes(auth_object = nil)
-    ["nickname"]
+  def self.ransackable_attributes(_auth_object = nil)
+    ['nickname']
   end
 
   def self.from_omniauth(auth)

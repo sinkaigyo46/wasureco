@@ -1,12 +1,10 @@
 class UsersController < ApplicationController
-
   def show
     @user = User.find(params[:id])
     @user_total_times_by_year_and_month = calculate_user_genre_total_times_by_year_and_month(@user.hobbies)
   end
 
   private
-
 
   def calculate_user_genre_total_times_by_year_and_month(hobbies)
     genre_total_times_by_year_and_month = Hash.new do |hash, year|
