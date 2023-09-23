@@ -6,7 +6,8 @@
       <%= f.text_field :nickname_cont, placeholder: 'ユーザー名' %>
     </div>
     <%= f.submit '検索' %>
-  <% end %>
+<% end %>
+
   <% if params[:q].present? %>
 <% if @users.present? %>
   <ul class="user-list">
