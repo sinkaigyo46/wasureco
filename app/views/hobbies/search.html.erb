@@ -5,8 +5,7 @@
       <div class="search-field">
         <%= f.text_field :nickname_cont, placeholder: 'ユーザー名' %>
       </div>
-      <%= f.submit '検索' %>
-    </div>
+      <%= f.submit '検索' %><br>
   <% end %>
 
   <% if params[:q].present? %>
@@ -19,9 +18,10 @@
         <% end %>
       </ul>
     <% else %>
-      <p>該当するユーザーはいません。</p>
+      <div class="nil-user">該当するユーザーはいません。</div>
     <% end %>
   <% end %>
+    </div>
 </div>
 
 <%= render "shared/footer" %>
