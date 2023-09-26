@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
 @import "simple_calendar";
+@import "search";
 
 /*********************************************
 主要機能
@@ -589,34 +590,3 @@ thead {
   margin: 20px 0px 50px 0px;
 }
 
-/*********************************************
- 検索機能
-*********************************************/
-
-.search-btn {
-  border-radius: 50px;
-}
-
-.search-main {
-  align-items: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
-.user-list {
-  padding-top: 30px;
-}
-
-.search-user{
-  color: #0d0015;
-  border-bottom: #9d5b8b solid 1px;
-}
-
-.search-field {
-  padding-bottom: 5px;
-}
-
-.nil-user {
-  padding-top: 20px;
-}
