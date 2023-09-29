@@ -4,6 +4,7 @@
 @import "shared/main";
 @import "shared/search";
 @import "shared/calendar";
+@import "shared/post";
 
 
 /*********************************************
@@ -231,112 +232,6 @@ li {
   color: #432f2f;
 }
 
-/*********************************************
- 投稿機能 
-*********************************************/
-
-.select {
-  width: 200px;
-  height: 40px;
-  border-radius: 5%;
-}
-
-.time-select{
-  width: 70px;
-  height: 30px;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.text-input {
-  width: 200px;
-  height: 120px;
-}
-
-.field {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.edit-contents {
-  display: flex;
-  justify-content: center;
-}
-
-.item {
-font-family: 'Titillium Web', sans-serif;
-}
-
-.date {
- text-align: center;
- color:black;
-}
-
-.genre {
-  font-weight: 500;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.genre-1 {
-  border: #C5C1FF solid 0.5px;
-  color :#1f3134;
-  background-image: linear-gradient(90deg, rgba(253, 177, 170, 1), rgba(240, 226, 226, 1));
-}
-
-.genre-2 {
-  border: #1f3134 solid 0.5px;
-  color: #eaf4fc;
-  background-image: radial-gradient(circle, rgba(111, 109, 83, 1), rgba(224, 162, 8, 1) 80%);
-}
-
-.genre-3 {
-  border: #a2d7dd solid 0.5px;
-  color: #e7e7eb;
-  background-color: #488384;
-}
-
-.genre-4 {
-  border: #deb068 solid 0.5px;
-  color: #fef4f4;
-  background-color: #96514b;
-}
-
-.genre-5 {
-  border: #f2a0a1 solid 0.5px;
-  color: #a0d8ef;
-  background-color: #e2041b;
-}
-
-.genre-6 {
-  border:#fffffc solid 0.5px;
-  color:#fbfaf5;
-  background-color: #007bbb;
-}
-
-.genre-7 {
-  border:#f2f2b0 solid 0.5px;
-  color:#640125;
-  background-color: #f8e58c;
-}
-
-.genre-8 {
-  border:#e6eae3 solid 0.5px;
-  color:#fef4f4;
-  background-color: #b3ada0;
-}
-
-.time {
-text-align: end;
-font-size: 20px;
-text-decoration: underline #80989b;
-}
-
-.count{
-  color:#ea5506;
-  display: inline;
-}
 
 /*********************************************
 詳細、編集、削除ボタン 
