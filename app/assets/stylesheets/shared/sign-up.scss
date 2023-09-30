@@ -1,0 +1,83 @@
+
+/*********************************************
+ログイン、サインアップ機能 
+*********************************************/ 
+
+.action {
+  display: flex;
+  justify-content: center;
+}
+
+.action2 {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.action2:hover {
+  text-decoration: underline #1f3134 solid 1px;
+}
+
+.action2 a {
+  color: #00552e;
+}
+
+.sign_up {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.sign_up_title h2{
+font-size: 40px;
+color :gold;
+margin-bottom: 10px;
+} 
+
+.registration-main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.login-flash-message{
+  margin-bottom: 20px;
+}
+
+.google-sign-up {
+  margin-left: 40px;
+  background-color: #38b48b;
+  border: #00a497 solid 1px;
+  text-align: center;
+}
+
+.google-sign-up:hover {
+  background-color: #00a497;
+  border: #38b48b solid 1px;
+  text-decoration: underline;
+}
+
+.google-sign-up a {
+  color: #000b00;
+}
+
+.google-login {
+  margin:0 0 30px 40px;
+  background-color: #38b48b;
+  border: #00a497 solid 1px;
+  text-align: center;
+}
+
+.google-login:hover {
+  background-color: #00a497;
+  border: #38b48b solid 1px;
+  text-decoration: underline;
+}
+
+.google-login a{
+  color: #000b00;
+}
+
+
+
