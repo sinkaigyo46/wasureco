@@ -88,4 +88,3 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth',">= 2.0.0"
 gem 'ransack'
-gem 'react-rails'
