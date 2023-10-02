@@ -1,7 +1,6 @@
 window.addEventListener('turbo:load', function(){
   const search = document.getElementById('search');
   const pullDownMenu = document.getElementById('search');
-  const spinner = document.getElementById('spinner');
 
   search.addEventListener('mouseover', function(){
     this.setAttribute('style',"background-color: #ffdb4f;");
@@ -10,8 +9,10 @@ window.addEventListener('turbo:load', function(){
     this.removeAttribute('style',"background-color: #ffdb4f;");
   });
 
-  
-  spinner.classList.add('loaded');
+  document.addEventListener('turbo:load', function() {
+    const loader = document.getElementById('loader');
+    loader.classList.add('loaded');
+  });
 
 
 });
