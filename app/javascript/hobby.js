@@ -8,11 +8,11 @@ window.addEventListener('turbo:load', function(){
   search.addEventListener('mouseout', function(){
     this.removeAttribute('style',"background-color: #ffdb4f;");
   });
+ 
 
-  document.addEventListener('turbo:load', function() {
-    const loader = document.getElementById('loader');
-    loader.classList.add('loaded');
-  });
+});
 
-
+document.addEventListener('turbo:load', function() {
+  const loader = document.getElementById('loader');
+  loader.classList.add('loaded');
 });
