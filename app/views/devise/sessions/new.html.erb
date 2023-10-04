@@ -1,19 +1,23 @@
 <%= render 'shared/second-header' %>
 
 
-<div class="main">
- <div class="sign_up">
+<div class="session-main">
  
-<div class="sign_up_title">
+<div class="sign_in_title">
 <h2>ログイン</h2>
 </div>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
   <div class='login-flash-message'>
     <%= flash[:notice] %>
     <%= flash[:alert] %>
   </div>
-  
+  <div class="registration-main">
+  <div class="btn google-login">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000b00" class="bi bi-google" viewBox="0 0 16 16">
+  <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
+</svg>
+  <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
+  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -23,26 +27,17 @@
     <%= f.label :パスワード %>
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
  <div class="action">
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: 'registration-submit' %>
   </div>
-    </div>
+  </div>
+  
    <div class="action2"><%= link_to '新規登録', new_user_registration_path %></div>
+  </div>
+  
   <% end %>
-  </div>
-  <div class="btn google-login">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#000b00" class="bi bi-google" viewBox="0 0 16 16">
-  <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"/>
-</svg>
-  <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post%>
-  </div>
+  
+</div>
 </div>
 <%= render "shared/footer" %>

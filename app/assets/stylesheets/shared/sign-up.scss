@@ -3,14 +3,42 @@
 ログイン、サインアップ機能 
 *********************************************/ 
 
+.session-main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .action {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
+}
+
+.registration-submit {
+  width: 120px;
+  height: 40px;
+  border: 1px solid rgb(216, 218, 223);
+  background-color: #b3ada0;
+  border-radius: 3px;
+  padding: 0 auto;
+  opacity: 0.8;
+}
+
+.session-submit:hover {
+  opacity: 1.2;
 }
 
 .action2 {
-  margin: 15px 0;
+  background-color: #e7e7eb;
+  margin: auto;
   text-align: center;
+  border: #00a497 solid 1px;
+  border-radius: 30px;
+  margin-top: 30px;
+  
 }
 
 .action2:hover {
@@ -21,40 +49,45 @@
   color: #00552e;
 }
 
-.sign_up {
-  margin-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
+.registration-main {
+  background-color: #a0d8ef;
+  box-shadow:6px 6px 6px 6px #e7e7eb ;
+  padding: 50px 100px;
+  border-radius: 5px;
+  bottom: 700px;
+  margin-bottom: 200px;
 }
 
 .sign_up_title h2{
+text-align: center;
 font-size: 40px;
 color :gold;
-margin-bottom: 10px;
+margin-bottom: 20px;
 } 
 
-.registration-main{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
+.sign_in_title h2 {
+text-align: center;
+font-size: 40px;
+color :gold;
 }
+
+
+
 
 .login-flash-message{
   margin-bottom: 20px;
 }
 
 .google-sign-up {
-  margin-left: 40px;
   background-color: #38b48b;
-  border: #00a497 solid 1px;
+  border: #e7e7eb solid 1px;
   text-align: center;
+  margin-bottom: 30px ;
 }
 
 .google-sign-up:hover {
   background-color: #00a497;
-  border: #38b48b solid 1px;
+  border:  solid 1px;
   text-decoration: underline;
 }
 
@@ -63,10 +96,10 @@ margin-bottom: 10px;
 }
 
 .google-login {
-  margin:0 0 30px 40px;
   background-color: #38b48b;
-  border: #00a497 solid 1px;
+  border: #e7e7eb solid 1px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .google-login:hover {
