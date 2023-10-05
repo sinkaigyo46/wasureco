@@ -17,6 +17,15 @@
   margin-top: 30px;
 }
 
+.action2 {
+  background-color: #e7e7eb;
+  margin: auto;
+  text-align: center;
+  border: #00a497 solid 1px;
+  border-radius: 30px;
+  margin-top: 30px;  
+}
+
 .registration-submit {
   width: 120px;
   height: 40px;
@@ -27,18 +36,8 @@
   opacity: 0.8;
 }
 
-.session-submit:hover {
+.registration-submit:hover {
   opacity: 1.2;
-}
-
-.action2 {
-  background-color: #e7e7eb;
-  margin: auto;
-  text-align: center;
-  border: #00a497 solid 1px;
-  border-radius: 30px;
-  margin-top: 30px;
-  
 }
 
 .action2:hover {
@@ -56,6 +55,9 @@
   border-radius: 5px;
   bottom: 700px;
   margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sign_up_title h2{
@@ -72,9 +74,6 @@ text-shadow: 3px 1px 2px gold;
 font-size: 40px;
 color :#000b00;
 }
-
-
-
 
 .login-flash-message{
   margin-bottom: 20px;
@@ -114,5 +113,14 @@ color :#000b00;
   color: #000b00;
 }
 
+.text-field {
+  border: 1px solid rgb(216, 218, 223);
+  border-radius: 3px;
+  width: 200px;
+}
+
+.text-field:focus {
+  outline: 1px solid #dccb18;
+}
 
 

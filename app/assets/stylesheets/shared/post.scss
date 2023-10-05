@@ -9,6 +9,10 @@
   border: 1px solid rgb(216, 218, 223);
 }
 
+.select:focus{
+  outline: 1px solid #dccb18;
+}
+
 .time-select{
   width: 100px;
   height: 30px;
@@ -17,12 +21,21 @@
   border: 1px solid rgb(216, 218, 223);
 }
 
+.time-select:focus{
+  outline: 1px solid #dccb18;
+}
+
 .text-input {
   width: 250px;
   height: 120px;
   border: 1px solid rgb(216, 218, 223);
   resize: none;
 }
+
+.text-input:focus {
+  outline: 1px solid #dccb18;
+}
+
 
 .field {
   margin-bottom: 10px;
@@ -52,7 +65,8 @@
 }
 
 .error-message {
-  color: #f8e58c;
+  text-align: center;
+  color: #1f3134;
 }
  
 .edit-contents {
