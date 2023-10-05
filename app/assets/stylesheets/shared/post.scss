@@ -2,6 +2,16 @@
  投稿機能 
 *********************************************/
 
+.posts-main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
 .select {
   width: 250px;
   height: 40px;
@@ -44,10 +54,15 @@
 }
 
 .form-list {
-  background-color: #a0d8ef;
+  width: 550px;
+  background-color: #abced8;
   box-shadow:6px 6px 6px 2px #e7e7eb inset;
   padding: 30px 30px;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .submit {
@@ -58,10 +73,17 @@
   border-radius: 3px;
   padding: 0 auto;
   opacity: 0.8;
+  box-shadow: 2px 5px  #dcd3b2;
 }
 
 .submit:hover {
   opacity: 1.2;
+}
+
+.submit:active {
+  box-shadow: none;
+  position :relative;
+  top :5px;
 }
 
 .error-message {

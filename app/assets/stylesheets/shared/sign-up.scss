@@ -34,12 +34,18 @@
   border-radius: 3px;
   padding: 0 auto;
   opacity: 0.8;
+  box-shadow: 2px 5px  #dcd3b2;
 }
 
 .registration-submit:hover {
   opacity: 1.2;
 }
 
+.registration-submit:active {
+  box-shadow: none;
+  position :relative;
+  top :5px;
+}
 .action2:hover {
   text-decoration: underline #1f3134 solid 1px;
 }
