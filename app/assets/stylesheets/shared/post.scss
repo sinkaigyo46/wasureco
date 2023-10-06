@@ -56,7 +56,8 @@
 .form-list {
   width: 550px;
   background-color: #abced8;
-  box-shadow:6px 6px 6px 2px #e7e7eb inset;
+  box-shadow:6px 6px 6px #e7e7eb inset,
+  -6px -6px  6px #e7e7eb inset;
   padding: 30px 30px;
   border-radius: 5px;
   display: flex;
