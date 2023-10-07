@@ -7,6 +7,7 @@
 }
 
 .purchase-btn {
+  opacity: 0.5;
   color:#302833;
   width: 105px;
   height: 105px;
@@ -25,6 +26,7 @@
   color:#302833;
   transition: all 500ms ease 0ms;
   color: #eaf4fc;
+  opacity: 1;
 }
 
 .purchase-btn:active {
