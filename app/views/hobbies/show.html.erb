@@ -1,26 +1,31 @@
 <%= render 'shared/header' %>
 <% breadcrumb :hobbies %>
 
-<div class="main">
-  <div class="edit-contents">
-    <div class="edit-item">
-      <h3 class="date">
+<div class="posts-main">
+ <div class="content-title">
+    <h2>  
+      投稿内容
+    </h2>
+  </div>
+  <div class="show-contents">
+    <div class="show-item">
+      <h3 class="show-date">
         <%= @hobby.date %>
       </h3>
       <div class="genre <%= "genre-#{@hobby.genre.id}" %>">
         <%= @hobby.genre.name %>
       </div>
-      <p class="time">
+      <div class="show-time">
         <%= @hobby.time %>h
-      </p>
-      <p class="activity">      
+      </div>
+      <div class="show-activity">      
         <%= @hobby.activity %>
-      </p>
-      <div class="show-btn">
+      </div>
+    </div>
+     <div class="show-btn">
         <%= link_to '編集', edit_hobby_path, method: :get, class: "edit-btn" %>
         <%= link_to '削除', hobby_path(@hobby.id), data: { turbo_method: :delete }, class: "destroy-btn" %>
       </div>
-    </div>
   </div>
 </div>
 

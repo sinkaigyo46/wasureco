@@ -1,0 +1,39 @@
+
+.show-contents {
+  width: 550px;
+  height: 500px;
+  background-color: #abced8;
+  box-shadow:6px 6px 6px #e7e7eb inset,
+  -6px -6px  6px #e7e7eb inset;
+  padding: 30px 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.show-item {
+  padding-top: 50px;
+  width: 250px; 
+}
+
+
+
+.show-date {
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.show-time {
+  padding-top: 20px;
+  text-align: end;
+  font-size: 25px;
+  
+}
+
+.show-activity {
+  padding: 10px 0 10px;
+}

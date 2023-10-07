@@ -28,12 +28,13 @@ body {
   flex-grow: 1;
   overflow-y: auto;
 }
-.show-main {
+
+.user-show-main {
   height: 100vh;
   display: flex;
 }
 
-.show-contents {
+.user-show {
   flex-grow: 1;
   overflow-y: auto;
 }
