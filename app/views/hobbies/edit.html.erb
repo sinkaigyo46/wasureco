@@ -1,11 +1,16 @@
 <%= render "shared/header" %>
 <% breadcrumb :hobby %>
 
-<div class="main">
+<div class="posts-main">
+<div class="sign_up_title">
+<h2>
+編集
+</h2>
+</div>
   <%= form_with model: @hobby, url: hobby_path, class: 'form', local: true do |f| %>
     <%= render "shared/error_messages", model: f.object %>
-    
-    <ul class="form-list">
+   <div class=form-list> 
+    <ul >
       <li>
         <%= f.label :日付, class: 'lavel' %> <br >
         <%= f.date_field :date, class: 'select' %>
@@ -22,8 +27,9 @@
         <%= f.label :コメント, class: 'lavel' %><br >
         <%= f.text_area :activity, class: 'text-input' %>
       </li>
-      <%= f.submit '投稿' %>
     </ul>
+    <%= f.submit '投稿',class:'submit' %>
+   </div>
   <% end %>
 </div>
 
