@@ -2,17 +2,20 @@
  検索機能
 *********************************************/
 
-.search-btn {
-  border-radius: 50px;
-  margin-right: 7px;
-  margin-bottom:7px;
-}
+
 
 .search-main {
-  align-items: center;
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.search-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top:150px;
 }
 
 .user-list {
@@ -28,6 +31,40 @@
   padding-bottom: 5px;
 }
 
+.search-form {
+  border: 1px solid rgb(216, 218, 223);
+  border-radius: 3px;
+  width: 200px;
+  height: 40px;
+}
+
+.search-form:focus {
+  outline: 1px solid #dccb18;
+}
+
+.search-b {
+  margin-top: 5px;
+  width: 100px;
+  height: 40px;
+  border: 1px solid rgb(216, 218, 223);
+  background-color: #b3ada0;
+  border-radius: 3px;
+  padding: 0 auto;
+  opacity: 0.8;
+  box-shadow: 0 5px  #dcd3b2;
+}
+
+.search-b:hover {
+  opacity: 1.2;
+}
+
+.search-b:active {
+  box-shadow: none;
+  position :relative;
+  top :5px;
+}
+
 .nil-user {
   padding-top: 20px;
 }
+

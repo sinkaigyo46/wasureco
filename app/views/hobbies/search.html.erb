@@ -1,11 +1,13 @@
 <%= render "shared/header" %>
 <div class="search-main">
   <%= search_form_for @q, url: search_hobbies_path, html: { id: "detailed-search-form" } do |f| %>
-    <div class="seach-content">
+    <div class="search-content">
       <div class="search-field">
-        <%= f.text_field :nickname_cont, placeholder: 'ユーザー名' %>
+        <%= f.text_field :nickname_cont, placeholder: 'ユーザー名', class: 'search-form' %>
       </div>
-      <%= f.submit '検索' %><br>
+     <div class="search-btn"> 
+      <%= f.submit '検索', class: 'search-b' %><br>
+      </div>
   <% end %>
 
   <% if params[:q].present? %>
