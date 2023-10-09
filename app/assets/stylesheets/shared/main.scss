@@ -1,6 +1,15 @@
 /*********************************************
 主要機能
 *********************************************/
+@mixin scroll {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+@mixin display {
+  height: 100vh;
+  display: flex;
+}
 
 a {
   text-decoration: none;
@@ -12,31 +21,26 @@ body {
 }
 
 .main {
-  height: 100vh;
-  display: flex;
+  @include display;
   justify-content: center;
   align-items: center;
 }
 
 .index-main {
+  @include display;
   position: relative;
-  height: 100vh;
-  display: flex;
-}
-
-.main-contents {
-  flex-grow: 1;
-  overflow-y: auto;
 }
 
 .user-show-main {
-  height: 100vh;
-  display: flex;
+  @include display;
+}
+
+.main-contents {
+  @include scroll;
 }
 
 .user-show {
-  flex-grow: 1;
-  overflow-y: auto;
+  @include scroll;
 }
 
 @keyframes fadeOut {
@@ -56,10 +60,10 @@ body {
   position: absolute;
   background-color: #00a497;
   z-index:1000;
-}
 
-#loader.loaded {
+&.loaded {
   animation: fadeOut 4s forwards;
+}
 }
 
 .spinner {
@@ -76,7 +80,6 @@ body {
   width: 18px;
   height: 18px;
   background-color: #333;
-
   border-radius: 100%;
   display: inline-block;
   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
