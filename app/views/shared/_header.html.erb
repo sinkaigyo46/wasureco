@@ -16,7 +16,7 @@
          <% end %>
   
         <%= link_to current_user.nickname, user_path(current_user.id), class: "fs-5" %>
-        <%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete} , class: "btn btn-primary" %>
+        <%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete} , class: "btn btn-outline-primary me2" %>
         <% else %>
         <%= link_to "ログイン", new_user_session_path, class:"btn btn-outline-primary me-2" %>
         <%= link_to "新規登録", new_user_registration_path,  class:"btn btn-outline-primary me-2" %>

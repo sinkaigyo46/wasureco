@@ -28,31 +28,31 @@
   border-radius: 80px;
   box-shadow: 5px 5px 15px #fef4f4 inset,
   -5px -5px 15px #fef4f4 inset;
-  }
-  
-  .fs-1:hover {
+
+  &:hover {
     box-shadow: 5px 5px 15px #fef4f4 inset,
   -5px -5px 10px #fef4f4 inset,
     0 0 15px #fef4f4;
    transition: all 200ms ease 0ms;
   }
 
-  .fs-1:active {
+  &:active {
     transition: all 300ms ease 0ms;
     position: relative;
     left: 15px;
   }
-
+  }
+  
 .fs-5 {
   font-weight: bold;
   color: #302833;
   text-decoration: none;
   padding-top :10px;
   margin-right :20px;
-}
 
-.fs-5:hover {
-  color: #ffec47;
+  &:hover {
+    color: #ffec47;
+  }
 }
 
 .col-md-3 {
@@ -64,25 +64,12 @@
  color: whitesmoke;
  background-color: #38b48b;
  border-color: #eaeea2;
-}
 
-.btn.btn-primary:hover {
+ &:hover {
   border-color: #eaf4fc; 
   color: #16160e; 
   background-color: #2ca9e1;
 }
-  
-.btn.btn-outline-primary:hover {
-  border-color: #eaf4fc; 
-  color: #16160e; 
-  background-color: #2ca9e1;
-}
-
-.btn-primary{
- color: whitesmoke;
- background-color: #38b48b;
- border-color: #eaeea2;
- margin-bottom: 5px;
 }
 
 .search-btn {
