@@ -1,19 +1,28 @@
-
 /*********************************************
 ログイン、サインアップ機能 
 *********************************************/ 
 
-.session-main {
-  height: 100vh;
+@mixin title-text {
+text-align: center;
+text-shadow: 3px 1px 2px gold;
+font-size: 40px;
+color :#000b00;
+}
+
+@mixin display {
   display: flex;
-  align-items: center;
   justify-content: center;
+}
+
+.session-main {
+  @include display;
+  height: 100vh;
+  align-items: center;
   flex-direction: column;
 }
 
 .action {
-  display: flex;
-  justify-content: center;
+  @include display;
   margin-top: 30px;
 }
 
@@ -24,6 +33,14 @@
   border: #00a497 solid 1px;
   border-radius: 30px;
   margin-top: 30px;  
+
+  a {
+    color: #00552e;
+  }
+
+  &:hover {
+    text-decoration: underline #1f3134 solid 1px;
+  }
 }
 
 .registration-submit {
@@ -35,23 +52,16 @@
   padding: 0 auto;
   opacity: 0.8;
   box-shadow: 2px 5px  #dcd3b2;
-}
 
-.registration-submit:hover {
-  opacity: 1.2;
-}
+  &:hover {
+    opacity: 1.2;
+  }
 
-.registration-submit:active {
-  box-shadow: none;
-  position :relative;
-  top :5px;
-}
-.action2:hover {
-  text-decoration: underline #1f3134 solid 1px;
-}
-
-.action2 a {
-  color: #00552e;
+  &:active {
+    box-shadow: none;
+    position :relative;
+    top :5px;
+  }
 }
 
 .registration-main {
@@ -67,66 +77,45 @@
 }
 
 .content-title h2{
-text-align: center;
-text-shadow: 3px 1px 2px gold;
-font-size: 40px;
-color :#000b00;
+@include title-text;
 margin-bottom: 20px;
 } 
 
 .sign_in_title h2 {
-text-align: center;
-text-shadow: 3px 1px 2px gold;
-font-size: 40px;
-color :#000b00;
+  @include title-text;
 }
 
 .login-flash-message{
-  margin-bottom: 20px;
+ margin-bottom: 20px;
 }
 
-.google-sign-up {
-  background-color: #38b48b;
-  border: #e7e7eb solid 1px;
-  text-align: center;
-  margin-bottom: 30px ;
-}
 
-.google-sign-up:hover {
-  background-color: #00a497;
-  border:  solid 1px;
-  text-decoration: underline;
-}
-
-.google-sign-up a {
-  color: #000b00;
-}
-
-.google-login {
+.google-btn {
   background-color: #38b48b;
   border: #e7e7eb solid 1px;
   text-align: center;
   margin-bottom: 30px;
-}
 
-.google-login:hover {
-  background-color: #00a497;
-  border: #38b48b solid 1px;
-  text-decoration: underline;
-}
-
-.google-login a{
-  color: #000b00;
+  a {
+    color: #000b00;
+  }
+  
+  &:hover {
+    background-color: #00a497;
+    border: #38b48b solid 1px;
+    text-decoration: underline;
+  }
 }
 
 .text-field {
   border: 1px solid rgb(216, 218, 223);
   border-radius: 3px;
   width: 200px;
+
+  &:focus {
+    outline: 1px solid #dccb18;
+  }
 }
 
-.text-field:focus {
-  outline: 1px solid #dccb18;
-}
 
 
